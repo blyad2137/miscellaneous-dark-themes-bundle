@@ -5,6 +5,9 @@
 @description    `A Miscellaneous Module that provides dark mode to a lot of smaller websites.`
 @author         blyad (https://github.com/blyad2137)
 @license	CC BY-NC-SA 4.0
+@homepageURL    https://github.com/blyad2137/miscellaneous-dark-themes-bundle
+@supportURL     https://github.com/blyad2137/miscellaneous-dark-themes-bundle/issues
+@updateURL      https://userstyles.world/api/style/3717.user.css
 @preprocessor	stylus
 
 @var checkbox stylus "Stylus Page Dark Mode:" 1
