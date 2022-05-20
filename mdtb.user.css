@@ -1,44 +1,18 @@
 /* ==UserStyle==
 @name           Miscellaneous Dark Themes Bundle
 @namespace      github.com/blyad2137/miscellaneous-dark-themes-bundle
-@version        1.0.0
-@description    `A Miscellaneous Module that provides dark mode to a lot of smaller websites.`
+@version        1.1.0
+@description    `A Miscellaneous Module that provides dark mode for a lot of smaller websites.`
 @author         blyad (https://github.com/blyad2137)
-@license	CC BY-NC-SA 4.0
+@license		CC BY-NC-SA 4.0
 @homepageURL    https://github.com/blyad2137/miscellaneous-dark-themes-bundle
 @supportURL     https://github.com/blyad2137/miscellaneous-dark-themes-bundle/issues
 @updateURL      https://userstyles.world/api/style/3717.user.css
-@preprocessor	stylus
+@preprocessor	uso
 
-@var checkbox stylus "Stylus Page Dark Mode:" 1
-@var checkbox tes3mp "TES3MP Page Dark Mode:" 1
-@var checkbox gameplaytips "gameplay.tips Page Dark Mode:" 1
-@var checkbox levelskip "LevelSkip Page Dark Mode:" 1
-@var checkbox loaderto "LOADER.TO Page Dark Mode:" 1
-@var checkbox tryhardguides "Try Hard Guides Page Dark Mode:" 1
-@var checkbox sms24me "SMS24.me Page Dark Mode:" 1
-@var checkbox justnotepadcom "JustNotepad.com Page Dark Mode:" 1
-@var checkbox prntsc "LightShot(prnt.sc) Page Dark Mode:" 1
-@var checkbox pcgamer "PC Gamer Page Dark Mode:" 1
-@var checkbox pcwonderland "PC Wonderland Page Dark Mode:" 1
-@var checkbox convertingcolors "Converting Colors Page Dark Mode:" 1
-@var checkbox smsreceivefree "SMSReceiveFree Page Dark Mode:" 1
-@var checkbox cc "creative commons Page Dark Mode:" 1
-@var checkbox theverge "The Verge Page Dark Mode:" 1
-@var checkbox vg247 "VG247 Page Dark Mode:" 1
-@var checkbox haemprojects "Haem Projects Page Dark Mode:" 1
-@var checkbox stallman "Richard Stallman's Personal Site Dark Mode:" 1
-@var checkbox zipextractor "Zip Extractor Page Dark Mode:" 1
-@var checkbox geturl "get-url Page Dark Mode:" 1
-@var checkbox bigjpg "Bigjpg Page Dark Mode:" 1
-@var checkbox fitgirl "FitGirl Repacks Page Dark Mode:" 1
-@var checkbox modwatch "Modwat.ch Page Dark Mode" 1
-==/UserStyle== */
-
-
-@-moz-document domain("stylus-lang.com") {
-	if stylus {			
-			::-webkit-scrollbar-track {
+@advanced dropdown stylus "Stylus Page Dark Mode:" {
+	1. "ON" <<<EOT 
+		::-webkit-scrollbar-track {
 				 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 				 border-radius: 0px;
 				 background-color: #212121;
@@ -107,11 +81,11 @@
 		.sidebar {
 			border-color: var(--border-color-300);
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("tes3mp.com") {
-	if tes3mp {
+@advanced dropdown tes3mp "TES3MP Page Dark Mode:" {
+	1. "ON" <<<EOT
 		:root {
 			--bg: #1b1b1b;
 			--grey: #aab5b9;
@@ -128,13 +102,13 @@
 		}
 		a {
 			color: var(--accent);
-		}
-	}
+		} 
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("gameplay.tips") {
-	if gameplaytips {
-		:root {
+@advanced dropdown gameplaytips "gameplay.tips Page Dark Mode:" {
+	1. "ON" <<<EOT
+	:root {
 			--w100: #fff;
 			--w200-r: #efeeee;
 
@@ -207,11 +181,12 @@
 			background-color: var(--d100);
 			border-color: var(--d100);
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-@-moz-document domain("levelskip.com") {
-	if levelskip {
-				::-webkit-scrollbar-track {
+@advanced dropdown levelskip "LevelSkip Page Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0px;
 					 background-color: #212121;
@@ -316,16 +291,12 @@
 			color: #fff;
 			border-color: #fff;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("loader.to") {
-	if loaderto {
-		:root {
-			
-		}
-		
-		body, .card {
+@advanced dropdown loaderto "LOADER.TO Page Dark Mode:" {
+	1. "ON" <<<EOT
+	body, .card {
 			background-color: #1b1b1b;
 			color: #d5e5ff;
 		}
@@ -408,12 +379,12 @@
 		.sites:nth-of-type(7) svg path:nth-of-type(1) {
 			fill: transparent;
 		}
-	}
+	EOT;
 }
-
-@-moz-document domain("tryhardguides.com") {
-	if tryhardguides {
-		:root {
+	2. "OFF" <<<EOT EOT;
+@advanced dropdown tryhardguides "Try Hard Guides Page Dark Mode:" {
+	1. "ON" <<<EOT
+	:root {
 			--black-100: #000;
 			--dark-100: #1b1b1b;
 			--dark-200: #222;
@@ -589,12 +560,12 @@
 		.fortnite-db-image {
 			transition: all cubic-bezier(.42, 0, 0, 1) 200ms;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("sms24.me") {
-	if sms24me {
-				::-webkit-scrollbar-track {
+@advanced dropdown sms24me "SMS24.me Page Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #18191a;
@@ -705,12 +676,12 @@
 		.preloader div {
 			visibility: visible;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("justnotepad.com") {
-	if justnotepadcom {
-		body {
+@advanced dropdown justnotepad "JustNotepad.com Page Dark Mode:" {
+	1. "ON" <<<EOT 
+	body {
 			background-color: #1b1b1b;
 			color: #fff;
 		}
@@ -796,12 +767,12 @@
 			background-color: #1b1b1b;
 			color: #fff;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("prnt.sc"), domain("prntscr.com") {
-	if prntsc {
-				::-webkit-scrollbar-track {
+@advanced dropdown prntsc "LightShot(prnt.sc) Page Dark Mode:" {
+	1. "ON" <<<EOT 
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
 					 border-radius: 0;
 					 background-color: #212121;
@@ -818,7 +789,7 @@
 				}
 
 		html {
-			filter: invert(1);
+			filter: invert(1) hue-rotate(180deg);
 			background-color: #111;
 		}
 		body {
@@ -952,11 +923,11 @@
 		#report-abuse-form-wrapper {
 			border-color: #222;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("pcgamer.com") {
-	if pcgamer {
+@advanced dropdown pcgamer "PC Gamer Page Dark Mode:" {
+	1. "ON" <<<EOT 
 		:root {
 			--affiliate-disclaimer-font-color: #ccc;
 			--trending-background-color: #04030b;
@@ -1076,12 +1047,12 @@
 		.person-block {
 			border-color: #333;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("pcwonderland.com") {
-	if pcwonderland {
-		body {
+@advanced dropdown pcwonderland "PC Wonderland Page Dark Mode:" {
+	1. "ON" <<<EOT
+body {
 			background: #111 !important;
 			color: #ccc;
 		}
@@ -1201,12 +1172,12 @@
 		[style*="color: #0000ff"] {
 			color: #00b3ff !important;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("convertingcolors.com") {
-	if convertingcolors {
-		body {
+@advanced dropdown convertingcolors "Converting Colors Page Dark Mode:" {
+	1. "ON" <<<EOT
+	body {
 			color: #ccc;
 			background-color: #1b1b1b;
 		}
@@ -1322,12 +1293,12 @@
 		a {
 			color: #179be8;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("smsreceivefree.com") {
-	if smsreceivefree {
-		body {
+@advanced dropdown smsreceivefree "SMSReceiveFree Page Dark Mode:" {
+	1. "ON" <<<EOT 
+	body {
 			background-color: #111;
 			color: #90a2b0;
 		}
@@ -1363,12 +1334,12 @@
 		blockquote.blurb {
 			background-color: #141516 !important;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("creativecommons.org") {
-	if cc {
-		.donation-bar-wrapper {
+@advanced dropdown cc "creative commons Page Dark Mode:" {
+	1. "ON" <<<EOT
+	.donation-bar-wrapper {
 			background-color: #191919;
 			border-color: #000;
 			color: #ccc;
@@ -1479,12 +1450,12 @@
 		.widget_creativecommons_author_navigation_sidebar_widget .current_page_item a, .widget_creativecommons_author_navigation_sidebar_widget .current-page-ancestor a, .widget_atom_twitter_feeds .current_page_item a, .widget_atom_twitter_feeds .current-page-ancestor a, .widget.advanced-sidebar-menu .current_page_item a, .widget.advanced-sidebar-menu .current-page-ancestor a, .widget_categories .current_page_item a, .widget_categories .current-page-ancestor a, .widget_recent_entries .current_page_item a, .widget_recent_entries .current-page-ancestor a {
 			color: #b6b6b6;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("theverge.com") {
-	if theverge {
-				::-webkit-scrollbar-track {
+@advanced dropdown theverge "The Verge Page Dark Mode:" {
+	1. "ON" <<<EOT 
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #171717;
@@ -1716,12 +1687,12 @@
 		.c-group-header {
 			border-color: #1f1f24;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("vg247.com") {
-	if vg247 {
-		body[data-version=hd] {
+@advanced dropdown vg247 "VG247 Page Dark Mode:" {
+	1. "ON" <<<EOT
+	body[data-version=hd] {
 			background-color: #1b1b1b;
 			color: #eef1ff;
 		}
@@ -1753,13 +1724,6 @@
 		.article_footer .tagged_with ul li a:after {
 			color: #3f3f3f;
 		}
-		/*#content_below {
-			-webkit-mask: url(/static/img/vg247_logo_bg.svg) no-repeat center;
-			mask: url(/static/img/vg247_logo_bg.svg) no-repeat center;
-			background-color: #1f1f1f;
-			content: url('https://i.imgur.com/WFQNmEA.png');
-			image-rendering: auto;
-		}*/
 		#content_below {
 			background-image: none;
 		}
@@ -1811,12 +1775,12 @@
 		.disclaimer, #comments .container .post .button_group, .author_bio:not(.compact) {
 			border-color: #434343;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("haemprojects.com") {
-	if haemprojects {
-				::-webkit-scrollbar-track {
+@advanced dropdown haemprojects "Haem Projects Page Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #111;
@@ -2019,12 +1983,12 @@
 		#SITE_FOOTER a[href="https://www.haemprojects.com"] {
 			color: #fff;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("stallman.org") {
-	if stallman {
-				::-webkit-scrollbar-track {
+@advanced dropdown stallman "Richard Stallman's Personal Site Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #1b1b1b;
@@ -2086,12 +2050,12 @@
 		#titlebar h1 {
 			color: #000;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document regexp("^(https?)://zipextractor.*") {
-	if zipextractor {
-				::-webkit-scrollbar-track {
+@advanced dropdown zipextractor "Zip Extractor Page Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #262626;
@@ -2147,7 +2111,7 @@
 		}
 		[src='images/default_person.svg'] {
 			filter: invert(.845) hue-rotate(180deg);
-			background: #ddd !important;
+			background-color: #ddd !important;
 		}
 		#about {
 			border-color: #3b3b3b;
@@ -2169,12 +2133,12 @@
 		a:-webkit-any-link {
 			color: #007aff;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("get-url.com"), domain("bluemediafiles.com"), domain("dl.pcgamestorrents.org") {
-	if geturl {
-		body > p > img {
+@advanced dropdown get-url "get-url Page Dark Mode:" {
+	1. "ON" <<<EOT
+	body > p > img {
 			content: url('https://i.imgur.com/NDQDmcM.jpg');
 		}
 		body, tbody:nth-of-type(2) > tr > td > div {
@@ -2196,12 +2160,12 @@
 		.item {
 			color: #0060d7;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("bigjpg.com") {
-	if bigjpg {
-				::-webkit-scrollbar-track {
+@advanced dropdown bigjpg "Bigjpg Page Dark Mode:" {
+	1. "ON" <<<EOT
+	::-webkit-scrollbar-track {
 					 -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
 					 border-radius: 0;
 					 background-color: #212121;
@@ -2312,12 +2276,12 @@
 			filter: invert(.935) hue-rotate(180deg) saturate(5);
 			box-shadow: 3px 3px 6px rgba(193, 193, 193, .6);
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("fitgirl-repacks.site") {
-	if fitgirl {
-		body, button, input, select, textarea {
+@advanced dropdown fitgirl "[PART 1/2] FitGirl Repacks Page Dark Mode:" {
+	1. "ON" <<<EOT
+	body, button, input, select, textarea {
 			color: #d6d6d6;
 		}
 		.site, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .page-content, .site-content .entry-meta {
@@ -2386,20 +2350,20 @@
 		[style*="color: #3366ff"] {
 			color: #33adff !important;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document url-prefix("https://fitgirl-repacks.site/wp-content") {
-	if fitgirl {
+@advanced dropdown fitgirl-2 "[PART 2/2] FirGirl Repacks Page Dark Mode:" {
+	1. "ON" <<<EOT
 		body {
 			background-color: #1b1b1b;
 			color: #fff;
 		}
-	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
 }
-
-@-moz-document domain("modwat.ch") {
-	if modwatch {
+@advanced dropdown modwatch "Modwat.ch Page Dark Mode:" {
+	1. "ON" <<<EOT 
 		section {
 			background-color: #232323;
 			box-shadow: 3px 3px 6px 1px #000;
@@ -2424,7 +2388,7 @@
 			color: #000;
 		}
 		.menu-active {
-			box-shadow: 0 1px 6px 1px #000;;
+			box-shadow: 0 1px 6px 1px #000;
 		}
 		section h1, section h2, .login-wrapper input {
 			border-color: #555;
@@ -2450,5 +2414,1577 @@
 		.modlist-item.disabled:before {
    		 	background: linear-gradient(270deg,rgba(140,0,0,.25),#232323);
 		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown nightbot "[PART 1/5] Nightbot.tv Page Dark Mode:" {
+	1. "ON" <<<EOT
+				::-webkit-scrollbar-track {
+					 -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+					 border-radius: 0px;
+					 background-color: #212121;
+				}
+				html[hide-scrollbar="true"] ::-webkit-scrollbar{display:none}
+				::-webkit-scrollbar {
+					 width: 1em;
+					 background-color: #212121;
+				}
+				::-webkit-scrollbar-thumb {
+					 border-radius: 0px;
+					 -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+					 background-color: #455f77;
+		}
+
+		body {
+			background-color: #0e0e0e;
+			color: #aaa;
+		}
+		h1, h2, h3 {
+			color: #bbb;
+		}
+		.features-box-gray, .gray-bg {
+			background-color: #0f0f0f;
+		}
+		.divider-1 span {
+			background-color: #151515;
+		}
+		.section-container-gray-bg {
+			background-color: #0f0f0f;
+			border-color: #151515;
+		}
+		.footer-social a {
+			color: #222;
+		}
+		.btn-link-2, .navbar-inverse ul.navbar-nav li a.btn-link-2, hr {
+			border-color: #222;
+		}
+		.ibox-title, .ibox-content {
+			background-color: #0e0e0e;
+			border-color: #111;
+		}
+		.widget.style1 h2 {
+			color: #eee;
+		}
+		.white-bg, .footer, .breadcrumb {
+			background-color: #0e0e0e;
+		}
+		.border-bottom, .chat-activity-list .chat-element, .footer {
+			border-color: #111 !important;
+		}
+		.label, .badge {
+			background-color: #202728;
+			color: #fff;
+		}
+		.label-danger, .badge-danger {
+			background-color: #ed5565;
+			color: #fff;
+		}
+		.label-warning, .badge-warning, .label-warning-light, .badge-warning-light {
+			background-color: #f8ac59;
+			color: #fff;
+		}
+		.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
+			background-color: #0f0f0f;
+		}
+		.table-striped>tbody>tr:nth-of-type(odd) {
+			background-color: #111;
+		}
+		.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td, .table>thead>tr>th, .table-bordered {
+			border-color: #121212;
+		}
+		.form-control, .single-line {
+			background-color: #0f0f0f !important;
+			border-color: #151515 !important;
+			color: #eee !important;
+		}
+		.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+			background-color: #0e0e0e;
+			color: #aaa;
+			border-color: #151515;
+		}
+		.table-hover>tbody>tr:hover {
+			background-color: #0f0f0f;
+		}
+		.btn-white {
+			background-color: #0e0e0e;
+			border-color: #151515;
+		}
+		.btn-white:hover, .btn-white:focus, .btn-white:active, .btn-white.active, .open .dropdown-toggle.btn-white {
+			border-color: #222;
+		}
+		html.no-js {
+			background-color: #0000 !important;
+		}
+		div.pull-right > .btn {
+			border-color: #111 !important;
+		}
+		.btn.btn-default {
+			border-color: #151515;
+		}
+		input[type=range] {
+			filter: invert(1);
+		}
+		.help-block {
+			color: #bbb;
+		}
+		.dropdown-menu {
+			background-color: #0e0e0e;
+		}
+		.dropdown-menu .divider {
+			background-color: #111;
+		}
+		.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+			background-color: #111;
+			color: #eee;
+		}
+		.nav .open>a, .nav .open>a:hover, .nav .open>a:focus, .panel, .panel-footer {
+			background-color: #0e0e0e;
+		}
+		.panel-footer {
+			border-color: #151515;
+		}
+		.nav-tabs {
+			border-color: #222;
+		}
+		.nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
+			background-color: #111;
+			border-color: #111;
+			color: #bbb;
+		}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+			border-color: #222;
+		}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+			border-bottom-color: #0e0e0e;
+			color: #ccc;
+		}
+		pre {
+			background-color: #0f0f0f;
+			border-color: #111;
+			color: #ccc;
+		}
+		.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+			background-color: #151515;
+			border-color: #151515;
+		}
+		.pagination>li>a, .pagination>li>span {
+			background-color: #0e0e0e;
+			border-color: #151515;
+		}
+		.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+			background-color: #111;
+			border-color: #151515;
+			color: #4f98ff;
+		}
+		.autodj-controls {
+			background-color: rgb(15, 18, 21);
+		}
+		[src="assets/images/powered_by_soundcloud.png"], [src="assets/images/powered_by_monstercat.png"] {
+			filter: invert(1);
+		}
+		.slider.slider-horizontal .slider-track-low, .slider.slider-horizontal .slider-track-high {
+			background-color: #222;
+		}
+		.slider-selection {
+			background-image: none;
+			background-color: #4391d5;
+		}
+		.slider-track {
+			background-image: -webkit-linear-gradient(top,#222 0%,#292929 100%);
+			background-image: -o-linear-gradient(top,#222 0%,#292929 100%);
+			background-image: linear-gradient(to bottom,#222 0%,#292929 100%);
+		}
+		.list-group-item {
+			border-color: #131313;
+		}
+		.modal-content {
+			background-color: #111;
+		}
+		.modal-header, .modal-footer {
+			border-color: #252525;
+		}
+		code {
+			background-color: #191214;
+		}
+		.close:hover, .close:focus {
+			color: #fff;
+		}
+		.close {
+			color: #fff;
+			text-shadow: 0 1px 0 #111;
+		}
+		.btn-default {
+			background-color: #424242;
+			color: #111;
+		}
+		.btn-default:hover {
+			background-color: #5a5a5a;
+			border-color: #5a5a5a;
+			color: #ccc;
+
+		}
+		.btn-default:active:hover, .btn-default.active:hover, .open>.dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open>.dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open>.dropdown-toggle.btn-default.focus {
+			color: #ccc;
+			background-color: #353535;
+			border-color: #7c7c7c;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown nightbot-2 "[PART 2/5] Nightbot.tv Page Dark Mode:" {
+	1. "ON" <<<EOT 
+		body {
+			background-color: #2f4050;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown nightbot-3 "[PART 3/5] Nightbot.tv Page Dark Mode:" {
+	1. "ON" <<<EOT
+		.content h1, .content {
+			background-color: #0f0f0f;
+			border-color: #131313;
+		}
+		.content h2 {
+			border-top: 1px solid #131313;
+			background-image: linear-gradient(to bottom,#0e0e0e02,rgba(255,255,255,0));
+		}
+		a {
+			color: #4e8ef4;
+		}
+		.content aside {
+			color: #111;
+		}
+		.content table tr:nth-child(odd)>td {
+			background-color: #0e0e0e;
+		}
+		.content table tr:nth-child(even)>td {
+			background-color: #0f0f0f;
+		}
+		.content table tr:last-child, .content table th {
+			border-color: #222;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown nightbot-4 "[PART 4/5] Nightbot.tv Page Dark Mode:" {
+	1. "ON" <<<EOT
+		.teaser {
+			background-color: #0e0e0e;
+			color: #ccc;
+		}
+		.teaser__trackLink, .teaser__trackLink:visited {
+			color: #ccc;
+		}
+		.teaser__trackLink:active, .teaser__trackLink:focus, .teaser__trackLink:hover {
+			color: #999;
+		}
+		.sc-background-light, a.sc-link-medium {
+			background-color: #0f0f0f;
+			color: #ccc;
+		}
+		.teaser__dismiss {
+			filter: invert(1);
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown nightbot-5 "[PART 5/5] Nightbot.tv Page Dark Mode:" {
+		.jumbotron {
+			background-color: #111417;
+		}
+		.card-header, .list-group-item {
+			background-color: #0e0e0e;
+		}
+		.card, .home-categories div div.card {
+			border-color: #151515;
+			background-color: #0e0e0e;
+		}
+		.menu .page.active a {
+			color: #ccc;
+		}
+		.menu a {
+			color: #bbb;
+		}
+		.menu a:hover {
+			color: #ccc;
+		}
+		.content {
+			border-color: #111;
+		}
+		.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+			color: #eee;
+		}
+		.content {
+			color: #bbb;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown steamid "STEAMID I/O Page Dark Mode:" {
+	1. "ON" <<<EOT
+		::-webkit-scrollbar-track {
+					 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+					 border-radius: 2px;
+					 background-color: #0a0a0a;
+				}
+				html[hide-scrollbar="true"] ::-webkit-scrollbar{display:none}
+				::-webkit-scrollbar {
+					 width: 1em;
+					 background-color: #0a0a0a;
+				}
+				::-webkit-scrollbar-corner {
+					background-color: #0a0a0a;
+				}
+				::-webkit-scrollbar-thumb {
+					 border-radius: 2px;
+					 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .6);
+					 background-color: #C70008;
+				}
+
+		body, .container, header.row, .navbar-default.navbar.row, svg {
+			background-color: #000;
+		}
+		#content, .panel-heading, .panel-footer, td {
+			background-color: #111;
+			border-color: #222;
+		}
+		input, textarea, .input-lg.dropdown-toggle.btn-default.btn, .dropdown-menu>li>a, .dropdown-menu {
+			background-color: #222;
+			border-color: #333;
+			color: #fff;
+		}
+		.form-control, .form-control:focus {
+			background-color: #222;
+			border-color: #444;
+			color: #aaa;
+			box-shadow: 0 1px 1px rgba(255, 255, 255, .08) inset;
+		}
+		.alert-success {
+			background-color: #1d201b;
+			border-color: #32392c;
+			color: #52a254;
+		}
+		[type="checkbox"] {
+			filter: invert(1) hue-rotate(180deg);
+		}
+		canvas#chart_hits_year, canvas#chart_hits_week {
+			filter: invert(1) hue-rotate(170deg) saturate(4);
+		}
+		.leaflet-tile-pane {
+			filter: invert(.8865) hue-rotate(342deg) saturate(600%) sepia(0.35) brightness(.9) contrast(1.2);
+		}
+		.panel-default>.panel-heading {
+			color: #ccc;
+			background-color: #252525;
+			border-color: #444;
+		}
+		.container, .navbar-default, body, header, nav, .leaflet-control-attribution, .leaflet-control-scale-line {
+			color: #ccc;
+		}
+		code {
+			color: #c7254e;
+		}
+		.leaflet-container .leaflet-control-attribution {
+			background-color: rgba(0,0,0,.7);
+		}
+		.leaflet-bar a, .leaflet-bar a:hover {
+			background-color: #000;
+			border-color: #333;
+			color: #fff;
+		}
+		.leaflet-bar a:hover {
+			background-color: #040404;
+		}
+		.dropdown-menu>li>a:hover, .dropdown-toggle.btn-default:focus, .dropdown-toggle.btn-default:hover, .dropdown-toggle:focus, .dropdown-toggle:hover, .open>.dropdown-toggle.btn-default {
+			background-color: #333;
+			color: #ccc;
+		}
+		.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+			color: #888;
+		}
+		.form-control {
+			resize: vertical;
+		}
+		.form-group .btn-danger[type="submit"] {
+			margin-top: 1em;
+		}
+		form[action="feedback"] input[type="email"] {
+			margin-bottom: .5em;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown eurogamer "Eurogamer Page Dark Mode:" {
+	1. "ON" <<<EOT
+	:root {
+			--dark: #1b1b1b;
+			--dark-b: #1b1d1e;
+			--border: #31373a;
+
+			--black: #000;
+			--w-100: #fff;
+			--w-300: #ccc;
+			--accent: #00a1ec;
+			--blue: #529dff;
+
+			--button-color: #456ca0;
+			--button-color-secondary: #fff;
+			--button-color-hover: #2f8abb;
+		}
+		::-webkit-scrollbar {
+			background-color: #333;
+			width: 10px;
+			box-shadow: inset 0 0 5px rgba(80, 80, 80, .4);
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: var(--accent);
+			box-shadow: inset 0 0 3px rgba(0, 0, 0, .5);
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background-color: var(--button-color-hover);
+		}
+
+		body {
+			background-color: var(--dark);
+			color: var(--w-300);
+		}
+		.app_header, #content {
+			background-color: var(--dark);
+		}
+		#page_wrapper, .avatar, .supporter_promo {
+			background-color: var(--dark-b);
+		}
+		.nav_main .bottom, .disclaimer, .shelf, .article_footer, .latest .summary, .video_player, .video_player .video_playlist, .article_grid, .article_grid .summary, input[type=email], input[type=password], input[type=text], .page_title_wrapper, .author_bio:not(.compact), .archive_list .summary, .archive_by_date_nav, .article_body_content figure.right:not(.left), #comments .container .post_count, #comments .container .post .actions, .subs_wrapper, body[data-version=hd] .app_footer>.nav_wrapper>nav {
+			border-color: var(--border);
+		}
+		#content {
+			box-shadow: 0 50px 120px var(--dark-b), 50px 50px 113px var(--dark-b) inset, -50px -50px 110px var(--dark-b) inset;
+			z-index: 1;
+		}
+		.app_footer, .nav_main .nav_secondary, .view_archive .button {
+			z-index: 2;
+			position: relative;
+		}
+		.article_body_content b, .article_body_content strong, .summary .kicker, .summary .name, .summary .title, .latest .summary .strapline, .video_player .section_title, .video_player .title a, .article_body_content h2, .article_body_content h3, .article_body_content h4, .article_body_content h5, .article_body_content h6, .page_content div b, .page_content div strong, .page_content section b, .page_content section strong, .page_content div h2, .page_content div h3, .page_content div h4, .page_content div h5, .page_content div h6, .page_content section h2, .page_content section h3, .page_content section h4, .page_content section h5, .page_content section h6, .merch_component .details .title {
+			color: var(--w-100);
+		}
+		.summary .job_title, .video_player .description, .article_grid .summary .strapline, .archive_list .summary .strapline, .archive_by_date a, .username .scrim, .merch_component .details .strapline {
+			color: var(--w-300);
+		}
+		.article_header .title, .optanon-show-settings, a {
+			color: var(--accent);
+		}
+		.article_header>.details {
+			border-color: var(--dark-b);
+		}
+		.section_title, .section_title:not(.small), .author_bio .name a {
+			color: var(--blue);
+		}
+		.shelf .summary, body[data-version=hd] .spotlight .metadata {
+			background-color: var(--dark);
+		}
+		.shelf .details, .shelf .metadata, .spotlight .details {
+			background-color: var(--blue);
+		}
+		.shelf .details {
+			box-shadow: 10px 9px 20px rgba(0, 0, 0,.5);
+		}
+		.shelf .metadata {
+			box-shadow: 10px 20px 20px rgba(0, 0, 0,.5);
+		}
+		.shelf .details, .spotlight .details {
+			padding: .5rem;
+		}
+		.summary .strapline {
+			padding: 0 .25rem;
+		}
+		.summary .link_overlay:hover~.details, .summary a:not(.link_overlay):hover {
+			--summary-link-color: var(--w-100);
+		}
+		.summary .strapline:not(.article_grid .strapline):not(.latest .summary .strapline):not(.archive_list .summary .strapline) {
+			color: var(--black);
+		}
+		iframe, img, .video_wrapper {
+			background-color: var(--border);
+		}
+		.shelf .summary .comments a {
+			color: #18331c;
+		}
+		.summary .comments {
+			padding-left: .5em;
+			padding-bottom: .5em;
+		}
+		.summary:not(.shelf .summary):not(.spotlight .summary) {
+			--summary-link-color: #fff;
+		}
+		.video_player .playlist_item {
+			--video-player-background: var(--dark);
+			--video-player-color: var(--w-100);
+		}
+		.video_player .playlist_item.active, .video_player .playlist_item:hover {
+			--video-player-background: var(--blue);
+			--video-player-color: var(--black);
+		}
+		.search_box input {
+			color: var(--w-300);
+			background-color: var(--dark);
+		}
+		.search_box:before {
+			filter: invert(1);
+		}
+		.search_box input[type=text]::placeholder {
+			color: var(--w-300);
+			opacity: .35;
+		}
+		.article_body_content figcaption {
+			color: var(--w-300);
+			border-color: var(--border);
+		}
+		#comments .container .post .message {
+			color: #9996b7;
+		}
+		.article[data-paywalled=true] .article_body_content:after {
+			background-image: linear-gradient(180deg,hsla(0,0%,100%,0),var(--dark));
+		}
+		select, option {
+			background-color: var(--dark);
+			border-color: var(--border);
+			color: var(--w-100);
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown steelseries "[PART 1/2] SteelSeries Page Dark Mode:" {
+	1. "ON" <<<EOT 
+	::-webkit-scrollbar-track {
+					 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+					 border-radius: 2px;
+					 background-color: #212121;
+				}
+				html[hide-scrollbar="true"] ::-webkit-scrollbar{display:none}
+				::-webkit-scrollbar {
+					 width: 1em;
+					 background-color: #212121;
+				}
+				::-webkit-scrollbar-thumb {
+					 border-radius: 2px;
+					 -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, .6);
+					 background-color: #fc4e03;
+				}
+				::-webkit-scrollbar-thumb:hover {
+					 background-color: #fc7303;
+				}
+
+		body, html, #main, .header, .accordion, .accordion__content, .compatibility-section--light-embedded, .accordian-wrapper, .faq-question, .game-support, .background-white, .chatmix, .catalog-list-product__wrapper, .sorting-dropdown__label, .c015, .c01132, .form-field__label, .dashboard-body, .checkout-v3__body, .checkout-v3__container, .checkout-v3__container, .checkout-v3__wrapper, .form-field.form-field--checkbox .form-field__label, .icon-callout--white, .prod-grid.grid--white {
+			background-color: #000;
+		}
+		body, .catalog-breadcrumbs__item, .sticky-nav__list-item, .reviews a, .reviews a:hover, .button--link, .sticky-nav__left, .button--link, .compatibility-section--light-embedded .compatibility-item, .accordion__toggle, .faq.faq--light .faq-section__answer, .faq.faq--light .faq-section__answer a, .faq.faq--light .faq-section__question, .faq.faq--light .faq-section__title, .faq.faq--light .title-divider, .faq.faq--light .view-more-link a, .breadcrumb-wrapper a, .button, .social-icons__link svg, .frontpage-grid__product-category a, .post-category, .blog-post__header-title a, .post__author, .post__read-time, .frontpage-grid__benefit-banner--theme-light .frontpage-grid__benefit-banner-inner, .content-group__theme-light, .prod-tile__link, .prod-tile__link:active, .prod-tile__link:focus, .prod-tile__link:hover, .dev-portal--center, .facet__header, .facet__collapse-arrow, .constraint, .constraint:hover .constraint__count, .catalog-list-product__link:active, .catalog-list-product__link:focus, .catalog-list-product__link:hover, .catalog-list-product__link, .true-tracking__body, .catalog-pagination__link, .dashboard-body .dashboard-nav__item-link, .blog-categories a, .checkout-progress__step--current, .catalog-list-product__user-exclusive, .style--dark .poster__content .poster__content__inner {
+			color: #e2e2e2;
+		}
+		.media-set__link:hover {
+			border-color: #fff;
+		}
+		.media-set__link {
+			background-color: #141414;
+			border-color: #000;
+		}
+		.buy-section-option--swatches .buy-section-option__value-link {
+			-webkit-box-shadow: inset 0 0 0 2px #000;
+			box-shadow: inset 0 0 0 2px #000;
+			border-color: #242424;
+		}
+		.buy-section-option--swatches .buy-section-option__value-link.is-selected, .buy-section-option--swatches .buy-section-option__value-link:hover {
+			border-color: #e2e2e2;
+		}
+		.sticky-nav {
+			background-color: #000;
+			border-color: #141414;
+		}
+		.sticky-nav__list-item:hover {
+			background-color: #141414;
+		}
+		[src='https://media.steelseriescdn.com/thumbs/reviews/sources/c72f04d0e598426dbb71367f4b9f22e6.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/607fec90b40d470db1279af62583ca50.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/52c5b4e904d8444da3a1e9ef780bb3a0.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/37939e3d5376423b8e4a53025daa6ab4.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/8725f372b47344c8a2bd8099d52cd077.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/filer_public/d4/12/d4126ce4-e82f-4c51-bed3-d3e25f098760/faq_senseiten_grip_palm_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/90/2e/902edb47-1f32-4a1e-a8bb-77929684985b/faq_senseiten_grip_fingertip_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/7f/2a/7f2a4e26-7099-4501-9f51-c982537182de/faq_senseiten_grip_claw_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/45/14/45140fbc-0815-45ec-8152-5b1b9f825674/faq_senseiten_spec_top_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/ed/07/ed076eee-f06c-4481-8064-8558e06fd63a/faq_senseiten_spec_side_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/2b079617f6404b9389d0584f73a43b8b.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/05e2b0608e084f9a8353c9bbc0925e84.png.0x100_q100.png'], [src='https://media.steelseriescdn.com/thumbs/reviews/sources/32cc88c67fa345938e23b9dbf21928cd.png.0x100_q100.png'], [src='/static/media/Bullet.823abe3e.png'], [src='/static/media/how-it-works-icon.e5286d32.svg'], [src='/static/media/Brain.b50b5d20.png'], [src='/static/media/Trophy.81e39cab.png'], [src='/static/media/guides.f9b1a6f5.svg'], [src='/static/media/leaderboard.764791f9.svg'], [src='/static/media/stats.b94ebede.svg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/75/86/7586270a-8f00-46c1-a8b5-e9711445ef8e/rival600_graph_002.png__952x800_q100_crop-scale_subsampling-2.png'], [src='https://media.steelseriescdn.com/thumbs/filer_public/2e/bf/2ebfa269-214a-4d9d-9fa6-47fa274bb38b/palm_001_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/0e/fb/0efb383f-d013-46fd-aead-7d684b5322f0/claw_001_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/06/54/0654c139-18ed-4d31-857b-f6a733a54528/size_topdown_001_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='https://media.steelseriescdn.com/thumbs/filer_public/25/4e/254eb604-12b4-49bf-875a-23be2e61d145/size_side_001_fixed.png__952x800_q100_crop-scale_optimize_subsampling-2.jpg'], [src='/static/media/default.9cd40861.svg'], .mfp-arrow {
+			filter: invert(1) hue-rotate(180deg);
+		}
+		.button--link:hover, .compatibility-item__details, .cart-widget__title small, .footer-newsletter-form__label .form-field__required-mark {
+			color: #a7a7a7;
+		}
+		.cart-widget {
+			background-color: #000;
+			-webkit-box-shadow: 0 -2px 5px 2px #242424;
+			box-shadow: 0 -2px 5px 2px #242424;
+			border-color: #242424;
+		}
+		.accordion__toggle, .comparison-chart__table tbody tr:nth-child(2n) td, .comparison-chart__table tbody tr:nth-child(2n) th, .faq.faq--light, .newsletter-signup {
+			background-color: #141414;
+		}
+		.cart-widget .courtesy-navigation__caret {
+			background-color: #000;
+			border-color: #000;
+		}
+		.data-point {
+			border-color: #141414;
+		}
+		.comparison-chart__table tbody td, .comparison-chart__table tbody th {
+			border-color: #242424;
+		}
+		.button:not(.courtesy-navigation .navigation-list-item a) {
+			border-color: #e2e2e2;
+		}
+		.button:hover, .button:focus, .button:active {
+			border-color: #141414;
+		}
+		.form-field__widget {
+			background-color: #000 !important;
+			color: #e2e2e2 !important;
+			border-color: #4f4f4f;
+		}
+		.post-details {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		time.post-date {
+			color: #fff;
+		}
+		.post-category:after {
+			background-color: #e2e2e2;
+		}
+		.post-category:hover {
+			color: #4f4f4f;
+		}
+		.frontpage-grid__benefit-banner-inner {
+			background-color: #1a1a1a !important;
+		}
+		.cookie-popup__content {
+			color: #121212;
+			padding: 10px;
+		}
+		.content-group__theme-dark .button.button--solid, .split-banner--theme-dark .button.button--solid, .poster__content .poster__content__inner .button.button--solid, .button--white.button--solid {
+			background-color: #000;
+			border-color: #000;
+			color: #e2e2e2;
+		}
+		.content-group__theme-dark .button.button--solid:hover, .split-banner--theme-dark .button.button--solid:hover, .poster__content .poster__content__inner .button.button--solid:hover, .button--white.button--solid:hover {
+			background-color: #242424;
+			border-color: #242424;
+			color: #e2e2e2;
+		}
+		.split-banner--theme-light {
+			background-color: #050505 !important;
+			color: #fff;
+		}
+		.split-banner--theme-light:focus, .split-banner--theme-light:hover {
+			color: #fff;
+		}
+		.icon-callout--grey {
+			background-color: #1b1b1b;
+		}
+		.feature-grid, .feature-header--grid {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		.prod-tile {
+			background-color: #000;
+			color: #e2e2e2;
+			box-shadow: 0 6px 11px rgba(212, 218, 223, .04);
+			border-color: #1b1b1b;
+		}
+		.prod-tile-content {
+			border-color: #1b1b1b;
+		}
+		.prod-tile:hover {
+			background-color: #000;
+			box-shadow: 0 11px 16px rgba(212, 219, 225, .05);
+		}
+		.item--cloudsync, .dev-portal {
+			background-color: #1b1b1b;
+		}
+		.game-tile--your-game {
+			background-color: #1b1b1b;
+			border-color: #4f4f4f;
+		}
+		.game-tile--your-game:hover {
+			border-color: #a7a7a7;
+		}
+		.your-game--text {
+			color: #a7a7a7;
+		}
+		.feature-grid--border-bottom, .feature-grid--border-top, .reviews--with-borders {
+			border-color: #1b1b1b;
+		}
+		.background-grey {
+			background: linear-gradient(#050505,#1b1b1b);
+		}
+		.volume-dots__bar:after {
+			filter: invert(1);
+		}
+		.catalog-pagination__link.is-selected {
+			background-color: #fff;
+			color: #000;
+		}
+		.constraint__count, .faceted-product-list__result-count, .catalog-list-product__related-text span, .form-field__required-mark {
+			color: #858585;
+		}
+		.constraint__indicator, .facet+.facet {
+			border-color: #242424;
+		}
+		.constraint.is-disabled:not(.is-selected) .constraint__indicator {
+			background-color: #050505;
+			border-color: #050505;
+		}
+		.constraint--checkbox:hover .constraint__indicator {
+			border-color: #e2e2e2;
+		}
+		.catalog-list-product__image, .catalog-list-product__image img {
+			background-color: #050505;
+		}
+		.catalog-list-item:active, .catalog-list-item:focus, .catalog-list-item:hover {
+			border-color: #fff !important;
+		}
+		.sorting-dropdown__select {
+			background-color: #000;
+			border-color: #242424;
+			color: #e2e2e2;
+		}
+		.comparison-chart__table thead a {
+			color: #fff;
+		}
+		.prod-grid.grid--grey, .catalog-pagination__link:hover, .choose-country {
+			background-color: #1b1b1b;
+		}
+		.catalog-pagination__link.is-disabled { 
+			color: #242424;
+		}
+		.sr-only {
+			background-color: #000;
+			color: #fff;
+		}
+		.catalog-pagination__link.is-disabled svg {
+			fill: #242424;
+		}
+		div:nth-of-type(10), div:nth-of-type(12) {
+			border-color: #242424 !important;
+		}
+		.c0113 {
+			background: repeating-linear-gradient(-45deg, #000, #000 20px, #010101 20px, #010101 45px);
+		}
+		.c0113 h1, .c01134, .c01135, .c01136 {
+			color: #e8e8e8;
+		}
+		.c0110 .howItWorksText .titleDash, .c0154 span {
+			background-color: #e8e8e8;
+		}
+		.c0121> button {
+			background-color: #000 !important;
+			border-color: #4e4e4e !important;
+			color: #fff !important;
+		}
+		.dropdown-item {
+			color: #d1d5d9;
+		}
+		.c0121 .dropdown-menu {
+			background-color: #5e5e5e;
+		}
+		.dropdown-item:focus, .dropdown-item:hover {
+			background-color: #08090a;
+			color: #e6e8eb;
+		}
+		.c0122 .nav-link:hover {
+			background-color: #5e5e5e;
+			border-color: rgba(255, 255, 255, 0);
+		}
+		.c0122 .nav-link {
+			background-color: #4e4e4e;
+			color: #1d1d1d;
+		}
+		.c0147 {
+			color: #fff;
+		}
+		.c0147 span {
+			color: #333;
+		}
+		.table td, .table th {
+			border-color: #2f3031;
+		}
+		.c0153 {
+			background-color: #000;
+			box-shadow: 0 0 30px rgba(255, 255, 255, .15);
+		}
+		.c0154 {
+			color: #e8e8e8;
+		}
+		.c0152 {
+			background-color: #000;
+			box-shadow: 0 0 30px rgba(255, 255, 255, .15);
+		}
+		.c0188 {
+			background-color: #000;
+			border-color: #131514;
+		}
+		.c0188 li svg {
+			fill: #e6e6e6;
+		}
+		.c01112 .nav-link.active {
+			background-color: #000;
+			color: #fff;
+		}
+		.c01112 .nav-link {
+			border-color: #010101;
+			background-color: #000;
+			color: #fff;
+		}
+		.c01111 {
+			background: repeating-linear-gradient(-45deg, #000, #000 20px, #010101 20px, #010101 45px);
+		}
+		.c01126:not(.c0154) {
+			filter: invert(1);
+		}
+		.homepage img {
+			border-color: #000;
+		}
+		.css-1pw45wr-GiveawayHeader, .css-1hbqnis-GiveawayGetKeyRoot, .css-abrrub {
+			background-color: rgb(12, 12, 13);
+		}
+		.css-224uub-Title, .css-1nvpyc4-Subtitle, .css-mmdp1u, .css-gmdfl2, .css-1px9104 {
+			color: rgb(221, 201, 201);
+		}
+		.css-1b8fr09-GiveawayTabsAndContent, .css-gmdfl2 {
+			background-color: rgb(0, 0, 0);
+		}
+		.css-1f4y2dt, .css-3opgft-Separator {
+			background-color: rgb(51, 52, 55);
+		}
+		.css-dj22qe, .css-5l9ge6 {
+			color: rgb(232, 232, 232);
+		}
+		.css-onbpw3 {
+			border-bottom-color: rgb(16, 16, 17);
+		}
+		.auth-view__content--secondary {
+			border-color: #1b1b1b;
+		}
+		input:-internal-autofill-selected {
+			background-color: rgb(9, 10, 11) !important;
+		}
+		.dashboard-body .dashboard-nav__item-link:active, .dashboard-body .dashboard-nav__item-link:focus, .dashboard-body .dashboard-nav__item-link:hover, .cart-right-wrapper {
+			background-color: #1b1b1b;
+		}
+		.form-field__widget[disabled], .form-field__widget[readonly] {
+			background-color: #1b1b1b !important;
+			border-color: #242424;
+		}
+		.support-table__header {
+			background-color: #1b1b1b;
+			border-color: #242424;
+		}
+		.support-table, .support-table__column, .buy-section-option--buttons .buy-section-option__value-link {
+			border-color: #242424;
+		}
+		.support-table__row:hover { 
+			background-color: #050505;
+		}
+		.buy-section-option--buttons .buy-section-option__value-link:hover {
+			border-color: #e2e2e2;
+			color: #e2e2e2;
+		}
+		.buy-section-option--buttons .buy-section-option__value-link[data-state=unavailable] {
+			border-color: #1b1b1b;
+			background-color: #070707;
+		}
+		.blog-hero {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		.blog {
+			background-color: #1b1b1b;
+		}
+		.blog-post {
+			background-color: #000;
+			box-shadow: 0 6px 15px rgba(212, 219, 225, .08);
+		}
+		.post-meta__read-time, .product-tile-body, .widget-item__link {
+			color: #e2e2e2;
+		}
+		.user-content hr, .blog-post-footer {
+			border-color: #1b1b1b
+		}
+		.share-links__title, .tags-label {
+			color: #858585;
+		}
+		.grid--last, img.mfp-img {
+			background-color: #000;
+		}
+		.product-tile-link {
+			background-color: #000;
+			border-color: #050505;
+		}
+		.product-tile-link:active, .product-tile-link:focus, .product-tile-link:hover {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		.reviews--gray {
+			background-color: #1b1b1b;
+		}
+		.grid__inner:not([style="background-color: #EAEAEA"] .grid__inner), video.snow-video__video.background-white {
+			background-color: #000 !important;
+		}
+		.cart__coupon {
+			border-color: #000;
+		}
+		.widget-item__remove button {
+			filter: invert(1);
+		}
+		select, option {
+			background-color: #000;
+			color: #fff;
+			border-color: #1b1b1b;
+		}
+		.checkout-progress__step, .form-field__label-extra, .step-actions__back, .cart-total__vat, .cart-usp__item, .step-reviews__info small, .step-section__text {
+			color: #a7a7a7;
+		}
+		.checkout-progress__step--current {
+			color: #e2e2e2;
+		}
+		.choice-box__choice.is-active {
+			background-color: #03040c;
+		}
+		.choice-box__choice, .step-reviews__step, .choice-box--subtle .choice-box__choice.is-active {
+			border-color: #242424;
+		}
+		.choice-box__extra {
+			background-color: hsla(0, 0%, 0%, .8);
+		}
+		.catalog-list-product__user-exclusive, .buy-section__user-exclusive {
+			background-color: #1b1b1b;
+		}
+		.catalog-list-product__related-items .glide__slide {
+			background-color: #050505;
+		}
+		.accordian-wrapper .accordion, .accordian-wrapper .accordion .accordion__content {
+			background-color: #000;
+		}
+		.accordian-wrapper .accordion .accordion__toggle {
+			background-color: #1b1b1b;
+			color: #e2e2e2;
+		}
+		.compatibility-section--light-embedded .compatibility-item svg, .applied-facet__constraint, .applied-facet__constraint:hover {
+			color: #e2e2e2;
+		}
+		.applied-facet__constraint span {
+			background-color: #000;
+		}
+		.applied-facet__constraint:hover span {
+			background-color: #e2e2e2;
+		}
+		.applied-facet__constraint:hover svg {
+			fill: #000;
+		}
+		.search-full input[type="search"], .modal--notifyme {
+			background-color: #000;
+		}
+		.search input[type="search"] {
+			border-color: #222;
+			color: #666;
+		}
+		.search:before {
+			background-color: #000;
+			color: #222;
+		}
+		.promoted-articles-item a, .recent-activity-item-parent, .recent-activity-item-link, .section-header, .article-list-item a {
+			color: #fff;
+		}
+		.community, .activity, .recent-activity-item, .article-list-item, .nav-line, .article-labels, .article-votes, .article-return-to-top, .article-relatives, .search-results-list > li:first-child, .search-results-list > li {
+			border-color: #222;
+		}
+		input {
+			background-color: #000;
+		}
+		.breadcrumbs li {
+			color: #ccc;
+		}
+		.article-title, .dropdown-item a, .search-header {
+			color: #e6e6e6;
+		}
+		.title-article-labels {
+			color: #e6e6e6;
+			border-color: #e6e6e6;
+		}
+		.article-labels a:hover {
+			background-color: #222;
+		}
+		.article-labels a {
+			background-color: rgba(34, 34, 34, .4);
+			color: #e6e6e6;
+		}
+		.article-vote {
+			border-color: rgba(252, 76, 2, 1);
+		}
+		.avatar .icon-agent::before {
+			border-color: #000;
+		}
+		.alertbox {
+			display: none;
+		}
+		.dropdown-item a:hover {
+			background-color: #161616;
+			color: #e6e6e6;
+		}
+		.section-tree-title a, .pagination li:hover:not(.pagination-current) span, .pagination li:hover:not(.pagination-current) a {
+			color: #fff;
+		}
+		.article-body img {
+			border-color: #222;
+			box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, .25);
+		}
+		.meta-data, .pagination a, .pagination span {
+			color: #ccc;
+		}
+		.pagination li:hover:not(.pagination-current) {
+			background-color: #030303;
+		}
+		.mfp-arrow-left .mfp-a, .mfp-arrow-left:after {
+			border-right-color: #000;
+		}
+		.mfp-arrow-right .mfp-a, .mfp-arrow-right:after {
+			border-left-color: #fff;
+		}
+		.mfp-arrow-right .mfp-a, .mfp-arrow-right:after {
+			border-left-color: #000;
+		}
+		.mfp-close-btn-in .mfp-close {
+			color: #c8c8c8;
+		}
+		.buy-section__user-exclusive-message {
+			color: #a7a7a7;
+		}
+		.widget-item__user-exclusive, .cart-item__user-exclusive {
+			background-color: #1b1b1b;
+		}
+		.dev-links .developer-header__title, .dev-links__svg, .dev-links__title {
+			color: #e2e2e2;
+		}
+		.dev-links__link {
+			background: linear-gradient(#050505,#1b1b1b);
+			box-shadow: 0 1px 4px 0 rgba(255, 255, 255, .37);
+		}
+		.dev-links__link--border {
+			border-color: #fff;
+		}
+		.button.is-inactive {
+			background-color: #1b1b1b;
+			color: #858585;
+			border-color: #2b2b2b;
+		}
+		.grid.cmsplugin-grid--634204 {
+			background-color: #1a1a1a !important;
+		}
+		.button--solid {
+			border-color: #121212;
+		}
+		.preview-wrapper--support-options, .address {
+			border-color: #2b2b2b;
+		}
+		.message {
+			background-color: #1b1b1b;
+			border-color: #858585;
+			color: #e2e2e2;
+		}
+		.message--warning {
+			background-color: #f9ea956b;
+			border-color: #af8d046b;
+			color: #ffca00;
+		}
+		.form-field__help-text {
+			color: #858585;
+		}
+		.catalog-list-product__related-items .glide__arrow {
+			background-color: #000;
+			color: #fff;
+		}
+		.catalog-list-product__related-items .glide__arrow:hover {
+			background-color: #1b1b1b;
+		}
+		.catalog-list-product__related-items .glide__slide:hover {
+			border-color: #fff;
+		}
+		.sticky-nav.sticky-nav__theme-light {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		.sticky-nav.sticky-nav__theme-light .sticky-nav__list-item:hover {
+			background-color: rgba(255, 255, 255, .1);
+		}
+		.sticky-nav.sticky-nav__theme-light .sticky-nav-brand, .sticky-nav.sticky-nav__theme-light .sticky-nav__list-item {
+			color: #e2e2e2;
+		}
+		.prod-grid.grid--grey .catalog-list-product__wrapper {
+			background-color: #1b1b1b;
+		}
+		.prod-grid.grid--grey .catalog-list-product__image, .prod-grid.grid--grey .catalog-list-product__image img, .prod-grid.grid--grey .catalog-list-product__related-items .glide__slide {
+			background-color: #000;
+		}
+		.prod-grid.grid--grey .catalog-list-product__related-text span {
+			color: #a7a7a7;
+		}
+		.catalog-list-product__wrapper.wrapper--related:active, .catalog-list-product__wrapper.wrapper--related:focus, .catalog-list-product__wrapper.wrapper--related:hover {
+			border-color: #fff;
+			box-shadow: 0 5px 14px -5px rgba(255, 255, 255, .5);
+		}
+		.split-banner.split-banner__content-split--right.split-banner__columns-equal.split-banner--theme-light {
+			background: inherit !important;
+		}
+		.faq {
+			background-color: #1b1b1b;
+			color: #e2e2e2;
+		}
+		.c0147 .nav-link.active {
+			background-color: #000;
+			color: #fff;
+		}
+		.c0146 {
+			background: repeating-linear-gradient(-45deg, #000, #000 20px, #010101 20px, #010101 45px);
+		}
+		.c0147 .nav-link {
+			background-color: #000;
+			border-color: #010101;
+			color: #fff;
+		}
+		.c0166, .css-z9e70g {
+			color: #fff;
+		}
+		.c0124:not(.container) {
+			background-color: #111;
+			border-color: #1c1a1b;
+		}
+		.c0124 li svg {
+			fill: #e6e6e6;
+		}
+		.css-1n3caxb, .switcher {
+			background-color: #000;
+		}
+		.css-xp1ezx {
+			color: #e8e8e8;
+		}
+		.css-y2xjy6 {
+			background-color: #000;
+			color: #000;
+		}
+		.homepage-features img {
+			border-color: #000;
+		}
+		[style="font-size:xx-large;color:black; font-family: Replica Pro,Helvetica,Arial,sans-serif;font-weight: 900;"], [style="clear: both;"] > center > p:nth-of-type(2) {
+			color: #fff !important;
+		}
+		.homepage-giveawayitem {
+			background-color: #000;
+			color: #fff;
+		}
+		.css-lmvsad {
+			background-color: #222;
+		}
+		.css-11brdx3 {
+			border-color: #000;
+		}
+		.css-c3q0pf {
+			background-color: #101418;
+		}
+		.css-dwcgy7, .css-p5ffz0 {
+			border-color: #222;
+		}
+		.post-meta .author-link, .switcher-controls .switcher-controls__control.tns-nav-active {
+			color: #e2e2e2;
+		}
+		.notify-me__description {
+			background-color: #1b1b1b;
+			color: #c8c8c8;
+			border-color: #4f4f4f;
+		}
+		.notify-me__form {
+			border-color: #1b1b1b;
+		}
+		.notify-me__form .notify-me__form__label {
+			color: #a7a7a7;
+		}
+		.switcher-controls .switcher-controls__control {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		[class="poster__content poster__content--gradient-705224 poster__content--content-placement-inside"] > .container > [class="poster__content__inner"] {
+			color: #121212;
+		}
+		[style*="background-color: #fff"] {
+			background-color: #000 !important;
+		}
+		.osano-cm-link {
+			color: #8980ff;
+		}
+		.buy-section-value-adds__content ul li {
+			background-color: #1b1b1b;
+			border-color: #2b2b2b;
+		}
+		html[class*="async-hide"] {
+			opacity: 1 !important;
+		}
+		.frontpage-grid__tile--theme-light {
+			background-color: #050505;
+			color: #fff;
+		}
+		.frontpage-grid__tile--content-placement-below.frontpage-grid__tile[style*="background-color: #DBDBDB"] {
+			background-color: #2b2b2b !important;
+		}
+		.frontpage-grid__tile--theme-light[style*="background-color: #DBDBDB"]:focus, .frontpage-grid__tile--theme-light[style*="background-color: #DBDBDB"]:hover, .icon--black {
+			color: #fff;
+		}
+		.frontpage-grid__tile--theme-light[style*="background-color: #DBDBDB"].frontpage-grid__tile--has-bg .frontpage-grid__tile-body, .frontpage-grid__tile--theme-light[style*="background-color: #DBDBDB"].frontpage-grid__tile--has-bg .frontpage-grid__tile-header {
+			text-shadow: 0 0 8px rgba(5, 5, 5, .1);
+		}
+		.frontpage-grid__category-inner .glide__bullet:hover {
+			background-color: #858585;
+			border-color: #858585;
+		}
+		.frontpage-grid__category-inner .glide__bullet {
+			background-color: #4f4f4f;
+		}
+		.frontpage-grid__category-inner .glide__bullet--active, .frontpage-grid__category-inner .glide__bullet--active:focus {
+			background-color: #c8c8c8;
+		}
+		[style*="background-color: #FFF"] {
+			background-color: #000 !important;
+		}
+		[style*="background-image: url('https://media.steelseriescdn.com/thumbs/filer_public/37/b4/37b48aaa-80d4-4b02-b711-6661805fe42d/flex_tile_background.png__350x400_q100_crop-scale_optimize_subsampling-2.png');"] {
+			background-image: none !important;
+			background-color: #000;
+		}
+		.flex-tile-content.text-dark {
+			color: #d1d1d1;
+		}
+		.frontpage-grid__category-inner .glide__arrow.glide__arrow--disabled {
+			background-color: #1b1b1b;
+			color: #858585;
+		}
+		[style*="background-color: #EAEAEA"] {
+			background-color: #1a1a1a !important;
+		}
+		[src*="/logo1.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo2.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo4.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo5.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"],[src*="/logo7.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo8.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo9.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo10.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo11.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo12.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo13.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo14.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo15.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo16.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo17.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"], [src*="/logo18.png__1920x700_q100_crop-scale_optimize_subsampling-2.png"] {
+			filter: invert(1);
+		}
+		.frontpage-grid__blog-post {
+			background-color: #000;
+			color: #e2e2e2;
+		}
+		.frontpage-grid__blog-post .post-details {
+			background-color: #050505;
+		}
+		.post-category.post-category--after::after {
+			background-color: #e2e2e2;
+		}
+		aside[class] {
+			background-color: #000 !important;
+			border-top-color: #1c1a1b !important;
+		}
+		.c0193, .c0194 {
+			background-color: #000;
+			box-shadow: 0 0 30px rgba(255, 255, 255, .15);
+		}
+		.c0195, .c0154 h1 {
+			color: #e8e8e8;
+		}
+		.c0195 span {
+			background-color: #e8e8e8;
+		}
+		.c0154 {
+			background: repeating-linear-gradient(-45deg, #000, #000 20px, #010101 20px, #010101 45px);
+		}
+		.c0162> button {
+			color: #fff !important;
+			border-color: #4e4e4e !important;
+			background-color: #000 !important;
+		}
+		.c0163 .nav-link {
+			background-color: #4e4e4e;
+			color: #1d1d1d;
+		}
+		.c0163 .nav-link:hover, .c0162 .dropdown-menu {
+			background-color: #5e5e5e;
+		}
+		.c0162 .dropdown-menu a {
+			color: #181818;
+		}
+		.c0162 .dropdown-menu .dropdown-item:hover {
+			color: #e6e8eb;
+		}
+		.c0175 {
+			background-color: rgba(0,0,0,.5);
+		}
+		.c0188 {
+			color: #fff;
+		}
 	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown steelseries-2 "[PART 2/2] SteelSeries Page Dark Mode:" {
+	1. "ON" <<<EOT
+		.grid__inner {
+			background-color: #0000 !important;
+		}
+		 .row.row--gutters+.row.row--gutters:last-of-type {
+			filter: inherit !important;
+		}
+	}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown lexyr "LEXYR Page Dark Mode:" {
+	1. "ON" <<<EOT 
+		:root {
+			--bg: #1b1b1b;
+			--primary: #d1d5d9;
+			--secondary: #e3ebff;
+			--muted: #9caab7;
+			--divider: #33363e;
+			--divider-rgb: 51, 54, 62;
+		}
+
+		body {
+			color: var(--primary);
+			background-color: var(--bg);
+		}
+		.gradient {
+			background: linear-gradient(rgba(255, 255, 255, 0), var(--bg));
+		}
+		canvas.vanta-canvas, [src="files/sg.svg"] {
+			filter: invert(.875) hue-rotate(180deg) saturate(2);
+		}
+		[src="files/lexyr-small.png"] {
+			filter: invert(1);
+		}
+		.content {
+			border-color: rgba(var(--divider-rgb),.7);
+		}
+		.card {
+			background-color: var(--bg);
+			border-color: rgba(var(--divider-rgb),.7);
+		}
+		.link-dark:focus, .link-dark:hover {
+			color: var(--secondary);
+		}
+		.link-dark {
+			color: var(--primary);
+		}
+		.text-muted {
+			color: var(--muted) !important;
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+@advanced dropdown socialgrep "SocialGrep Page Dark Mode:" {
+	1. "ON" <<<EOT
+		:root {
+			--dark-bg: #1b1b1b;
+			--dark-bg-2: #252931;
+			--tagify-dd-color-primary: rgb(75, 165, 217);
+			--tagify-dd-bg-color: #1b1b1b;
+			--white: #1b1b1b;
+			--gray: #a8b5c2;
+			--gray-dark: #a4bfdb;
+			--primary: #fff;
+			--primary-rgb: 255, 255, 255;
+			--dark: #e3ebff;
+			--divider: #33363e;
+			--divider-rgb: 51, 54, 62;
+		}
+		body {
+			background-color: var(--dark-bg);
+			color: var(--gray);
+		}
+		.nav-subtitle {
+			color: var(--gray);
+		}
+		.nav-link, .card-subtitle, .input-group-text, .table {
+			color: var(--gray-dark);
+		}
+		[style*="color: #677788"] {
+			color: var(--gray-dark) !important;
+		}
+		.navbar-vertical .nav-link, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, pre {
+			color: var(--dark);
+		}
+		.text-dark {
+			color: var(--dark) !important;
+		}
+		.navbar .nav-link:hover, a, a:hover, .navbar .show > .nav-link, .navbar .active > .nav-link, .navbar .nav-link.show, .navbar .nav-link.active, .nav-link:hover, .close:hover, .navbar-vertical .nav-link:hover .nav-indicator-icon, .navbar-vertical .show > .nav-link > .nav-indicator-icon, .navbar-vertical .active .nav-indicator-icon {
+			color: var(--primary);
+		}
+		[style*="color: #000000"], .text-primary {
+			color: var(--primary) !important;
+		}
+		.nav-indicator-icon {
+			color: #6d798b;
+		}
+		.navbar {
+			background-color: var(--dark-bg);
+		}
+		.card, .card-header, .card-footer {
+			background-color: var(--dark-bg);
+			border-color: rgba(var(--divider-rgb),.7);
+		}
+		.table .thead-light th {
+			background-color: var(--dark-bg-2);
+			border-color: rgba(var(--divider-rgb),.7);
+			color: var(--gray-dark);
+		}
+		.navbar-bordered, .nav-tabs, .page-header, hr {
+			border-color: var(--divider);
+		}
+		.navbar-vertical .navbar-nav.nav-tabs .active.nav-link, .navbar-vertical .navbar-nav.nav-tabs .active .nav-link {
+			border-left-color: var(--primary);
+		}
+		.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+			color: var(--primary);
+			border-color: transparent transparent var(--primary);
+		}
+		.tagify {
+			--tags-border-color: #3b3b3b;
+			--tags-hover-border-color: #4b4b4b;
+			--tags-focus-border-color: #3595f6;
+			--tag-bg: #2f2f2f;
+			--tag-hover: #445151;
+			--tag-text-color: var(--primary);
+			--tag-text-color--edit: var(--primary);
+			--tag-invalid-color: #513131;
+			--tag-invalid-bg: rgba(145, 71, 71, 0.5);
+			--tag-remove-bg: rgba(145, 71, 71, 0.3);
+			--tag-remove-btn-color: var(--primary);
+			--tag-remove-btn-bg--hover: #8d3b3b;
+			--placeholder-color: rgba(255, 255, 255, .4);
+			--placeholder-color-focus: rgba(255, 255, 255, .25);
+		}
+		.btn-soft-primary {
+			color: var(--primary);
+			background-color: rgba(var(--primary-rgb),.1);
+		}
+		.btn-soft-primary:hover, .btn-soft-primary:focus, .btn-soft-primary:active, .btn-soft-primary.active {
+			background-color: var(--primary);
+			color: var(--white);
+		}
+		[src="/static/socialgrep.svg"], .chartjs-render-monitor, .body-with-background::after, div.hero-image, .text-success, .text-warning, .text-danger, .card-title[style*="color: #ed1e79"] {
+			filter: invert(1) hue-rotate(180deg) saturate(2);
+		}
+		div.hero-image {
+			border-color: #ccced5;
+		}
+		.datatable-custom .sorting_desc:after, .datatable-custom .sorting:after, .datatable-custom .sorting_asc:after, .datatable-custom .sorting_desc:after {
+			filter: invert(.835) hue-rotate(180deg);
+		}
+		.close {
+			text-shadow: 0 1px 0 var(--dark-bg);
+		}
+	EOT;
+	2. "OFF" <<<EOT EOT;
+}
+==/UserStyle== */
+
+@-moz-document domain("stylus-lang.com") {
+	/*[[stylus]]*/
+}
+@-moz-document domain("tes3mp.com") {
+	/*[[tes3mp]]*/	
+}
+@-moz-document domain("gameplay.tips") {
+	/*[[gameplaytips]]*/
+}
+@-moz-document domain("levelskip.com") {
+	/*[[levelskip]]*/
+}
+@-moz-document domain("loader.to") {
+	/*[[loaderto]]*/	
+}
+@-moz-document domain("tryhardguides.com") {
+	/*[[tryhardguides]]*/
+}
+@-moz-document domain("sms24.me") {
+	/*[[sms24me]]*/	
+}
+@-moz-document domain("justnotepad.com") {
+	/*[[justnotepad]]*/
+}
+@-moz-document domain("prnt.sc"), domain("prntscr.com") {
+	/*[[prntsc]]*/
+}
+@-moz-document domain("pcgamer.com") {
+	/*[[pcgamer]]*/
+}
+@-moz-document domain("pcwonderland.com") {
+	/*[[pcwonderland]]*/
+}
+@-moz-document domain("convertingcolors.com") {
+	/*[[convertingcolors]]*/
+}
+@-moz-document domain("smsreceivefree.com") {
+	/*[[smsreceivefree]]*/
+}
+@-moz-document domain("creativecommons.org") {
+	/*[[cc]]*/
+}
+@-moz-document domain("theverge.com") {
+	/*[[theverge]]*/
+}
+@-moz-document domain("vg247.com") {
+	/*[[vg247]]*/
+}
+@-moz-document domain("stallman.org") {
+	/*[[stallman]]*/
+}
+@-moz-document regexp("^(https?)://zipextractor.*") {
+	/*[[zipextractor]]*/
+}
+@-moz-document domain("get-url.com"), domain("bluemediafiles.com"), domain("dl.pcgamestorrents.org") {
+	/*[[get-url]]*/
+}
+@-moz-document domain("bigjpg.com") {
+	/*[[bigjpg]]*/
+}
+@-moz-document domain("fitgirl-repacks.site") {
+	/*[[fitgirl]]*/
+}
+ @-moz-document url-prefix("https://fitgirl-repacks.site/wp-content") {
+	/*[[fitgirl-2]]*/
+}
+@-moz-document domain("modwat.ch") {
+	/*[[modwatch]]*/
+}
+@-moz-document domain("nightbot.tv") {
+	/*[[nightbot]]*/
+}
+@-moz-document regexp("^(https?)://nightbot.tv/(dashboard#|regulars|song_requests|account|logs|giveaways|commands|spam_protection|timers|integrations|privacy|terms)$") {
+	/*[[nightbot-2]]*/
+}
+@-moz-document domain("api-docs.nightbot.tv") {
+	/*[[nightbot-3]]*/
+}
+@-moz-document domain("w.soundcloud.com") {
+	/*[[nightbot-4]]*/
+}
+@-moz-document domain("docs.nightbot.tv") {
+	/*[[nightbot-5]]*/
+}
+@-moz-document domain("steamid.io") {
+	/*[[steamid]]*/
+}
+@-moz-document regexp("^(https?)://www.eurogamer.*$") {
+	/*[[eurogamer]]*/
+}
+@-moz-document domain("steelseries.com") {
+	/*[[steelseries]]*/
+}
+@-moz-document url-prefix("https://steelseries.com/gg/moments"), url-prefix("https://pl.steelseries.com/gg/moments"), url-prefix("https://pl.steelseries.com/gg"), url-prefix("https://steelseries.com/gg") {
+	/*[[steelseries-2]]*/
+}
+@-moz-document domain("lexyr.com") {
+	/*[[lexyr]]*/
+}
+@-moz-document domain("socialgrep.com") {
+	/*[[socialgrep]]*/
 }
